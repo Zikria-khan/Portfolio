@@ -5,6 +5,7 @@ const ContactForm = ({ onContactAdded }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent the default form submission
@@ -17,14 +18,17 @@ const ContactForm = ({ onContactAdded }) => {
       setName('');
       setEmail('');
       setMessage('');
+      setError(''); // Clear any previous error message
     } catch (error) {
       console.error('Error adding contact:', error);
+      setError('Failed to add contact. Please try again.'); // Set error message
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className="contact-form">
       <h2>Add New Contact</h2>
+      {error && <p className="error-message">{error}</p>} {/* Display error message */}
       <div>
         <label htmlFor="name">Name:</label>
         <input
