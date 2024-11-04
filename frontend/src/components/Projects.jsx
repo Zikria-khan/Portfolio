@@ -23,7 +23,7 @@ const Projects = () => (
         <h3>Voice-to-Speech Converter</h3>
         <p>A voice-to-speech converter application that converts spoken language into text.</p>
         <a href="https://github.com/Zikria-khan/Voice-to-Speech.git" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-        <a href="https://voice-to-speech-9sl1.vercel.app/" target="_blank" rel="noopener noreferrer">View Live</a>
+        <a href="https://voice-to-speech-7q3p.vercel.app/" target="_blank" rel="noopener noreferrer">View Live</a>
       </div>
 
     </div>
