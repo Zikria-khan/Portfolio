@@ -13,7 +13,7 @@ app.use(cors({
     origin: '*', // Allow all origins
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
-  }));
+}));
   
 app.use(bodyParser.json());
 
@@ -21,6 +21,11 @@ app.use(bodyParser.json());
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
+
+// Root route for testing
+app.get('/', (req, res) => {
+  res.send('API is running...'); // Simple message for testing
+});
 
 // Routes
 app.use('/api/contact', contactRoutes);
