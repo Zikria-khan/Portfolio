@@ -1,54 +1,61 @@
-// src/components/ContactForm.js
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const ContactForm = () => {
+const ContactForm = ({ onContactAdded }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [successMessage, setSuccessMessage] = useState('');
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent the default form submission
+    const newContact = { name, email, message };
+
     try {
-      await axios.post('http://localhost:5000/api/contact', { name, email, message });
-      setSuccessMessage('Message sent successfully!');
+      const response = await axios.post('http://localhost:3000/api/contact', newContact);
+      onContactAdded(response.data); // Callback to update the contact list
+      // Clear the form fields after submission
       setName('');
       setEmail('');
       setMessage('');
     } catch (error) {
-      console.error('Error sending message:', error);
+      console.error('Error adding contact:', error);
     }
   };
 
   return (
-    <div>
-      <h2>Contact Us</h2>
-      <form onSubmit={handleSubmit}>
-        <input 
-          type="text" 
-          placeholder="Your Name" 
-          value={name} 
-          onChange={(e) => setName(e.target.value)} 
-          required 
+    <form onSubmit={handleSubmit} className="contact-form">
+      <h2>Add New Contact</h2>
+      <div>
+        <label htmlFor="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
         />
-        <input 
-          type="email" 
-          placeholder="Your Email" 
-          value={email} 
-          onChange={(e) => setEmail(e.target.value)} 
-          required 
+      </div>
+      <div>
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
         />
-        <textarea 
-          placeholder="Your Message" 
-          value={message} 
-          onChange={(e) => setMessage(e.target.value)} 
-          required 
+      </div>
+      <div>
+        <label htmlFor="message">Message:</label>
+        <textarea
+          id="message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          required
         ></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      {successMessage && <p>{successMessage}</p>}
-    </div>
+      </div>
+      <button type="submit">Add Contact</button>
+    </form>
   );
 };
 

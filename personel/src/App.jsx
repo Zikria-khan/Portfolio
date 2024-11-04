@@ -1,8 +1,7 @@
 // src/App.js
 import React from 'react';
-import ContactForm from './components/ContactForm';
 import ContactList from './components/ContactList';
-
+import "./App.css"
 const App = () => {
   return (
     <div>

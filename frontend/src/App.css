@@ -103,6 +103,48 @@
   background-color: #e0e0e0; /* Light grey on hover */
   transform: translateY(-3px); /* Slight lift effect */
 }
+/* styles.css */
+.app-container {
+  max-width: 600px; /* Limit the width of the app */
+  margin: 0 auto; /* Center the app horizontally */
+  padding: 20px; /* Add some padding */
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.contact-list {
+  margin-top: 20px; /* Spacing above the contact list */
+}
+
+ul {
+  list-style-type: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding */
+}
+
+li {
+  background-color: #ffffff; /* Sets background color for each item */
+  border: 1px solid #ddd; /* Adds a border */
+  border-radius: 5px; /* Rounds corners of list items */
+  margin: 10px 0; /* Adds vertical space between items */
+  padding: 15px; /* Adds padding inside each list item */
+  position: relative; /* Enables positioning for the delete icon */
+}
+
+.delete-icon {
+  cursor: pointer; /* Change cursor to pointer on hover */
+  color: red; /* Color for the delete icon */
+  font-weight: bold; /* Make the X bold */
+  margin-left: 10px; /* Adds space between the message and the delete icon */
+  transition: color 0.2s ease; /* Smooth color transition */
+  position: absolute; /* Position the X at the right */
+  right: 10px; /* Align to the right */
+  top: 15px; /* Center vertically */
+}
+
+.delete-icon:hover {
+  color: darkred; /* Change color on hover for feedback */
+}
 
 /* Section Styles */
 section {

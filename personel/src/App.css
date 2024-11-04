@@ -1,42 +1,38 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* styles.css */
+ul {
+  list-style-type: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding */
+  margin: 20px 0; /* Adds margin around the list */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h2 {
+  font-size: 24px; /* Increases font size of the heading */
+  color: #34495e; /* Sets heading color */
+  margin-bottom: 15px; /* Adds space below the heading */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li {
+  background-color: #ffffff; /* Sets background color for each item */
+  border: 1px solid #ddd; /* Adds a border */
+  border-radius: 5px; /* Rounds corners of list items */
+  margin: 10px 0; /* Adds vertical space between items */
+  padding: 15px; /* Adds padding inside each list item */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+  transition: transform 0.2s; /* Smooth transition for hover effect */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+li:hover {
+  transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
-.card {
-  padding: 2em;
+.email-link {
+  color: #2980b9; /* Blue color for the email link */
+  text-decoration: none; /* Removes underline */
+  font-weight: bold; /* Makes the email text bold */
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
-.read-the-docs {
-  color: #888;
+.email-link:hover {
+  color: #3498db; /* Change color on hover */
+  text-decoration: underline; /* Underline on hover */
 }
