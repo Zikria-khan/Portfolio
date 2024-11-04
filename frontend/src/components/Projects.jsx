@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 
 const Projects = () => (
   <section id="projects" className="projects">
@@ -17,6 +17,13 @@ const Projects = () => (
         <p>A voice recording application developed with React and Node.js.</p>
         <a href="https://github.com/Zikria-khan/apprepo.git" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         <a href="https://mern-stack-websites-qvef.vercel.app/" target="_blank" rel="noopener noreferrer">View Live</a>
+      </div>
+
+      <div className="project-card voice-to-speech">
+        <h3>Voice-to-Speech Converter</h3>
+        <p>A voice-to-speech converter application that converts spoken language into text.</p>
+        <a href="https://github.com/Zikria-khan/Voice-to-Speech.git" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        <a href="https://voice-to-speech-9sl1.vercel.app/" target="_blank" rel="noopener noreferrer">View Live</a>
       </div>
 
     </div>
