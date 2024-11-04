@@ -25,7 +25,7 @@ const ContactList = () => {
 
   const deleteContact = async (id) => {
     try {
-      await axios.delete(`https://portfolio-3oad.vercel.app//api/contact/${id}`);
+      await axios.delete(`https://portfolio-3oad.vercel.app/api/contact/${id}`);
       setContacts(contacts.filter(contact => contact._id !== id)); // Update state to remove deleted contact
     } catch (error) {
       console.error('Error deleting contact:', error);
