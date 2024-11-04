@@ -13,7 +13,14 @@ const ContactForm = ({ onContactAdded }) => {
 
     try {
       const response = await axios.post('https://portfolio-3oad.vercel.app/api/contact', newContact);
-      onContactAdded(response.data); // Callback to update the contact list
+      
+      // Ensure onContactAdded is a function before calling it
+      if (typeof onContactAdded === 'function') {
+        onContactAdded(response.data); // Callback to update the contact list
+      } else {
+        console.error('onContactAdded is not a function');
+      }
+
       // Clear the form fields after submission
       setName('');
       setEmail('');
