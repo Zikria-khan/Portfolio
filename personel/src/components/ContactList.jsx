@@ -6,7 +6,7 @@ const ContactList = () => {
 
   const fetchContacts = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/contact');
+      const response = await axios.get('https://portfolio-3oad.vercel.app/api/contact');
       setContacts(response.data);
     } catch (error) {
       console.error('Error fetching contacts:', error);
