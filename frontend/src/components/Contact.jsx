@@ -11,7 +11,7 @@ const ContactForm = ({ onContactAdded }) => {
     const newContact = { name, email, message };
 
     try {
-      const response = await axios.post('http://localhost:3000/api/contact', newContact);
+      const response = await axios.post('https://portfolio-3oad.vercel.app/api/contact', newContact);
       onContactAdded(response.data); // Callback to update the contact list
       // Clear the form fields after submission
       setName('');
