@@ -3,7 +3,7 @@ import React from 'react';
 const Navbar = () => (
   <nav className="navbar">
     <div className="navbar-logo">
-      <img src="/w.jpg" alt="Zakriya Khan" className="user-image" />
+      <img src="/zakriya.jpg" alt="Zakriya Khan" className="user-image" />
       <h1>Zakriya Khan</h1>
     </div>
     <ul className="navbar-links">
