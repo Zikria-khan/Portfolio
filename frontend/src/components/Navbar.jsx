@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./Navbar.css"; // Import the CSS file for styling
 
 const Navbar = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
-  const toggleCart = () => setCartOpen(!isCartOpen);
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
   return (
@@ -22,14 +22,6 @@ const Navbar = () => {
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <button className="cart-button" onClick={toggleCart}>
-          🛒
-        </button>
-        {isCartOpen && (
-          <div className="cart-dropdown">
-            <p>Your cart is empty.</p>
-          </div>
-        )}
       </div>
     </nav>
   );
