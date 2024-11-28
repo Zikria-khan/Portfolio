@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./Navbar.css"; // Import the CSS file for styling
 
 const Navbar = () => {
-  const [isCartOpen, setCartOpen] = useState(false);
-  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleCart = () => setCartOpen(!isCartOpen);
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
