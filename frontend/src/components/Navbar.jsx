@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./Navbar.css"; // Import the CSS file for styling
+import { Link } from "react-router-dom";  // Importing Link component from react-router-dom
+import "./Navbar.css"
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -17,10 +18,10 @@ const Navbar = () => {
           ☰
         </button>
         <ul className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><Link to="/about">About</Link></li>  {/* Use Link for navigation */}
+          <li><Link to="/projects">Projects</Link></li>
+          <li><Link to="/skills">Skills</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
       </div>
     </nav>

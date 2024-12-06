@@ -1,0 +1,22 @@
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom right, #0077b6, #0096c7);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .hero-button {
+    margin-top: 20px;
+    background-color: #ff7f50;
+  }
+  
+  .hero-button:hover {
+    background-color: #e57350;
+  }
+  

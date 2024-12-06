@@ -1,0 +1,142 @@
+/* General Certificate Section Styling */
+#certificates {
+    background: #f4f4f4;
+    padding: 80px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  #certificates h2 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+  }
+  
+  /* Certificate List Layout */
+  .certificate-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Auto adjusting columns */
+    gap: 30px;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1200px; /* Max width for large screens */
+  }
+  
+  .certificate-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .certificate-card h3 {
+    font-size: 1.8rem;
+    color: #0077b6;
+    margin-bottom: 15px;
+  }
+  
+  .certificate-card p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .certificate-card img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  /* Hover Effects for Certificate Cards */
+  .certificate-card:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+  }
+  
+  .certificate-card:hover h3 {
+    color: #005f8b; /* Change header color on hover */
+  }
+  
+  /* Modal Overlay Styling */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it sits above all other content */
+    opacity: 0;
+    pointer-events: none; /* Prevent clicks outside of modal */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto; /* Allow clicks when modal is active */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: fadeIn 0.3s ease-out; /* Optional: adds a fade-in effect */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Modal Image */
+  .modal-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 80vh; /* Ensures the image is not too large */
+    object-fit: contain;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .close-btn:hover {
+    background-color: #005f8b;
+  }
+  

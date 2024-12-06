@@ -1,0 +1,115 @@
+/* General About Section Styling */
+#about {
+    background: #f9f9f9;
+    padding: 80px 20px; /* Increased top padding for more breathing space */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Keeps the content at the top of the section */
+  }
+  
+  /* About Header */
+  .about-header {
+    text-align: center;
+    margin-bottom: 50px; /* Increased bottom margin for better spacing */
+  }
+  
+  .about-header h2 {
+    font-size: 2.8rem; /* Slightly larger heading for emphasis */
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 20px; /* Added extra margin for separation */
+    letter-spacing: 1.5px;
+  }
+  
+  /* About Content Layout */
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 60px; /* Increased gap for better spacing between image and text */
+    padding: 0 20px; /* Add some horizontal padding for smaller screen spaces */
+  }
+  
+  /* About Image */
+  .about-image {
+    width: 280px; /* Slightly larger image size for better visibility */
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #0077b6; /* Slightly thicker border */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* More noticeable shadow */
+  }
+  
+  /* About Text */
+  .about-text {
+    max-width: 650px; /* Increased max-width for better content flow */
+    padding: 30px; /* Increased padding for more breathing room */
+    background: #fff;
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* More noticeable shadow */
+  }
+  
+  .about-text h3 {
+    font-size: 2.2rem; /* Slightly larger text for the name */
+    color: #0077b6;
+    margin-bottom: 20px; /* Increased margin for spacing */
+  }
+  
+  .bio {
+    font-size: 1.2rem; /* Increased font size for readability */
+    color: #555;
+    margin-bottom: 25px; /* Added more space below the bio */
+  }
+  
+  .about-text ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .about-text ul li {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px 20px; /* Increased padding for a more comfortable feel */
+    margin: 8px 0; /* Slightly more space between skill items */
+    border-radius: 5px;
+    font-size: 1.1rem; /* Slightly larger font for better readability */
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-image {
+      width: 240px; /* Slightly smaller image on mobile */
+      height: 240px;
+    }
+  
+    .about-text {
+      max-width: 90%; /* Increased max-width for better responsiveness */
+      padding: 20px; /* Less padding on mobile */
+    }
+  
+    .about-header h2 {
+      font-size: 2.2rem; /* Adjusted font size for smaller screens */
+    }
+  
+    .about-text h3 {
+      font-size: 1.8rem; /* Adjusted name size for smaller screens */
+    }
+  
+    .bio {
+      font-size: 1rem; /* Adjusted bio font size for smaller screens */
+    }
+  
+    .about-text ul li {
+      font-size: 1rem; /* Adjusted list item size for readability */
+      padding: 8px 15px; /* Reduced padding for mobile screens */
+    }
+  }
+  

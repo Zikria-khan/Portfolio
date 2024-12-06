@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';  // Importing Link from react-router-dom
+import "./Hero.css"
 
 const Hero = () => (
   <section className="hero">
-    <h1>Hi, I'm Zakriya khan</h1>
+    <h1>Hi, I'm Zakriya Khan</h1>
     <p>MERN Stack Developer | Passionate about creating innovative web applications.</p>
-    <a href="#projects" className="hero-button">See My Work</a>
+    <Link to="/projects" className="hero-button">See My Work</Link>  {/* Use Link for navigation */}
   </section>
 );
 
