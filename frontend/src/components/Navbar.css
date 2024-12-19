@@ -10,6 +10,7 @@
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  transition: padding 0.3s ease-in-out;
 }
 
 .navbar-container {
@@ -65,6 +66,7 @@
   background-color: #005f86;
 }
 
+/* Opened State for Navbar Links */
 .navbar-links.open {
   max-height: 500px; /* Adjust height as needed */
   opacity: 1;
@@ -96,6 +98,8 @@
     border-radius: 5px;
     max-height: 0;
     opacity: 0;
+    padding: 10px 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
   }
 
   .navbar-links.open {
@@ -125,5 +129,18 @@
   .navbar-links {
     max-height: none; /* No height restrictions */
     opacity: 1; /* Always visible */
+    flex-direction: row; /* Horizontal layout on large screens */
+    position: static; /* Navbar links are no longer absolute */
   }
+}
+
+/* Smooth Transition for Navbar on Toggle */
+.navbar-links,
+.menu-toggle {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Menu Toggle Transition */
+.menu-toggle.open {
+  transform: rotate(90deg); /* Rotate the hamburger icon when the menu is open */
 }
