@@ -2,14 +2,14 @@
 .navbar {
   background-color: #0077b6;
   color: white;
-  padding: 10px 20px;
+  padding: 20px 20px; /* Increased padding for better height */
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px; /* Added margin to the bottom */
+  margin-bottom: 20px;
 }
 
 .navbar-container {
@@ -42,7 +42,10 @@
   list-style: none;
   display: flex;
   gap: 20px;
-  transition: all 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
 }
 
 .navbar-links li {
@@ -60,6 +63,11 @@
 
 .navbar-links a:hover {
   background-color: #005f86;
+}
+
+.navbar-links.open {
+  max-height: 500px; /* Adjust height as needed */
+  opacity: 1;
 }
 
 /* Menu Toggle Button */
@@ -86,11 +94,14 @@
     right: 20px;
     width: 200px;
     border-radius: 5px;
-    display: none;
+    max-height: 0;
+    opacity: 0;
   }
 
   .navbar-links.open {
     display: flex;
+    max-height: 500px;
+    opacity: 1;
   }
 
   .navbar-links a {
@@ -101,5 +112,18 @@
 
   .navbar-links a:last-child {
     border-bottom: none;
+  }
+}
+
+/* Adjustments for Larger Screens */
+@media (min-width: 768px) {
+  .navbar {
+    padding: 30px 40px; /* Increased padding for larger screens */
+    height: auto; /* Ensures responsive height */
+  }
+
+  .navbar-links {
+    max-height: none; /* No height restrictions */
+    opacity: 1; /* Always visible */
   }
 }

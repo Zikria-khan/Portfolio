@@ -13,7 +13,7 @@ const About = () => {
       "JavaScript",
       "HTML & CSS"
     ],
-    image: "/zakriya.jpg" // Ensure this image exists in the public folder
+    image: "/asd.jpeg" // Ensure this image exists in the public folder
   });
 
   return (
@@ -21,10 +21,14 @@ const About = () => {
       <div className="about-header">
         <h2>About Me</h2>
       </div>
-      <div className="about-content">
-        <img src={data.image} alt={data.name} className="about-image" />
-        <div className="about-text">
+      <div className="about-card">
+        <div className="about-card-top">
+          <div className="about-image-container">
+            <img src={data.image} alt={data.name} className="about-image" />
+          </div>
           <h3>{data.name}</h3>
+        </div>
+        <div className="about-details">
           <p className="bio">{data.bio}</p>
           <p><strong>Skills:</strong></p>
           <ul>
