@@ -60,7 +60,7 @@ const Projects = () => (
       {/* Movie App */}
       <div className="project-card movie-app">
         <img
-          src="/dell.web" // Path to image in public folder
+          src="/dell.png" // Path to image in public folder
           alt="Movie App"
           className="project-image"
         />
